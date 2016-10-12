@@ -84,3 +84,12 @@ pin
 ---
 
 pon
+
+
+## Videos de youtube
+
+Se usa cogido html para verlos, se puede poner una imagen de fondo :D
+
+<a href="https://www.youtube.com/watch?v=SDH2ghIV67o
+" target="_blank"><img src="https://i.ytimg.com/vi/6ySPNY6gmBo/hqdefault.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
