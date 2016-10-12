@@ -37,3 +37,16 @@ Para utilizar el formateo del codigo de un lenguaje determinado se utiliza 3 `ti
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
+Otro bloque, pero para comandos:
+```
+>sudo su
+>rm -r /
+
+```
+Otro bloque, pero para html:
+```html
+<html>
+    <body>
+    </body>
+</html>
+```
