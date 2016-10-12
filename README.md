@@ -50,3 +50,15 @@ Otro bloque, pero para html:
     </body>
 </html>
 ```
+## Tablas
+Para las tablas,se las dibuja con |
+
+| Tables        | Are           | Cool  |
+| --- | --- | --- |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+| sirve | o no  | tabla |
+| --- | --- | --- |      
+| sirve | vamos | si !  |
