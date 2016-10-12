@@ -62,3 +62,15 @@ Para las tablas,se las dibuja con |
 | sirve | o no  | tabla |
 | --- | --- | --- |      
 | sirve | vamos | si !  |
+
+## Citas (de texto)
+
+> Y si me matas, ¿Me muero?
+
+> Señoras y señores,
+
+> Este es mi jodido repositorio
+
+La famosa frase:
+
+> Emociones a flor de piel
