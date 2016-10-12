@@ -32,5 +32,8 @@ Para las imagenes, lo mismo que un link pero se precede con una exclamación
 ## Formateo de codigo
 Para utilizar el formateo del codigo dentro del texto plano se utiliza la `tilde invertida`
 
-
-
+Para utilizar el formateo del codigo de un lenguaje determinado se utiliza 3 `tildes invertidas`
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
