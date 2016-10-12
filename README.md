@@ -74,3 +74,13 @@ Para las tablas,se las dibuja con |
 La famosa frase:
 
 > Emociones a flor de piel
+
+## Separadores (reglas horizontales)
+
+Se utilizan 3 guiones,puntos,asteriscos seguidos "_"
+
+pin
+
+---
+
+pon
