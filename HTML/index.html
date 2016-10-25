@@ -1,62 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #0c3867;">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
-    <title>Aprendiendo HTML</title>
+    <title>Aprendiendo CSS</title>
+    <link rel="stylesheet" href="Estilo1/estilos1.css">
+    <link rel="stylesheet" href="estilos.css">
+    
+    
+    <style>
+        /*   
+        //TAGS
+        nombreTag{
+        Propiedad1:valorPropiedad1;
+        Propiedad2:valorPropiedad2;
+        Propiedad3:valorPropiedad3;
+        }*/
+        html{
+            background-color: #123123;
+        }
+        body{
+            background-color: #687fd4;
+        }
+        
+        p{background-color: aquamarine;
+            
+        }
+        cualquiera{
+            background-color: floralwhite;
+        }
+        .nombreClaseRojo{
+            background-color: red;
+        }
+        .nombreClaseAzul{
+            background-color: blue;
+        }
+        .nombreClaseAmarillo{
+            background-color: yellow;
+        }
+        
+        
+        /*POR ID*/
+        #parrafoVerde{
+            background-color: darkgray;
+        }
+    </style>
 </head>
-
-<body style="background-color: #038888;">
-    <h1>NIRVANA</h1>
-    <p>Nirvana fue una banda de grunge estadounidense procedente de Aberdeen, Washington, Estados Unidos integrada por el vocalista y guitarrista Kurt Cobain y el bajista Krist Novoselic en 1987. Wikipedia</p>
-
-    <!--Imagen dentro de un Ancla-->
-
-    <a href="https://www.youtube.com/watch?v=vabnZ9-ex7o" target="_blank">
-        <img src="https://lh3.googleusercontent.com/-Y4weEKm6y0U/AAAAAAAAAAI/AAAAAAAAADg/kYtxfb4VzuE/photo.jpg" alt="Album Nirvana">
-    </a>
-    <!--Unordered List; con EMMEt : ul>li*3-->
-    <ul>
-        <!-- List Item  -->
-        <li>Smells Like Teen Spirit</li>
-        <li>Nevermind</li>
-        <li>Come as You Are</li>
-    </ul>
-
-    <!--Ordered List; con EMMEt : ul>li*3-->
-    <ol>
-        <li>Mejor</li>
-        <li>banda</li>
-        <li>de grunge</li>
-        <li>de la jodida historia</li>
-    </ol>
-
-    <!--Para poner links (atributo para cargar en otra pestaña)    -->
-    <a href="https://www.youtube.com/watch?v=DkTklehHaDY" target="_blank"> Moist Vagina </a>
-
-    <h2>Cabecera mediana</h2>
-    <h3>Cabecera 3</h3>
-    <h4>Cabecera 4</h4>
+<body>
+    <h1>Hola</h1>
+    <p class="nombreClaseRojo">Parrafo Rojo</p>
+    <h1 class="nombreClaseAmarillo">Amigos</h1>
+    <p id="parrafoVerde" class="nombreClaseAmarillo">Parrafo Amarillo</p>
+    <h1>Politecnicos</h1>
+    <p class="nombreClaseAzul">Parrafo Azul</p>
+    <p>Parrafo sin clase</p>
+    <cualquiera>Cualquiera</cualquiera>
 </body>
 
 </html>
-
-
-Analizaremos esta URL: https://www.google.com.ec/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8 :https://www.google.com.ec
-
-
-<!--
-EJEMPLO DE XML
-<universidad 
-   nombre="Escuela Politécnica Nacional"
-   estudiantes="2500"> 
-    <facultad>
-        <nombre>Sistemas</nombre>
-    </facultad>
-    <facultad>
-        <nombre>Electrica</nombre>
-    </facultad>
-    <facultad>
-        <nombre>Mecanica</nombre>
-    </facultad>
-</universidad>-->
