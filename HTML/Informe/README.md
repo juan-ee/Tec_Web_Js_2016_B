@@ -29,8 +29,8 @@
   * <a href="#www">World Wide Web</a>    
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
   * <a href="#pagweb">Página web con HTML</a>
-  * <a href="postman">Postman</a>
-  * <a href="inspector">Inspector Web</a>  
+  * <a href="#postman">Postman</a>
+  * <a href="#inspector">Inspector Web</a>  
 - <a href="#conrec">Conclusiones y Recomendaciones</a> 
 
 
@@ -297,14 +297,14 @@ Postman es una extensión gratuita para el navegador Google Chrome que permite p
 Su instalación es bastante sencilla, simplemente debemos buscarlo en las extensiones de Chrome e instalarlo con 1 sólo click:
 
 <p align="center">
-<img src="">
+<img src="https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/1.HTML/HTML/Informe/Capturas/InstalacionPostman.png">
 </p>
 
 Con Postman instalado, se puede analizar los métodos HTTP que vimos anteriormente con nuestro servidor web en funcionamiento. Con el método GET, se obtienen los datos que están en el servidor, ya sea en un archivo o base de datos, al cliente:
 
 
 <p align="center">
-<img src="">
+<img src="https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/1.HTML/HTML/Informe/Capturas/get.png">
 </p>
 
 En fin, es una gran herramienta con la que podemos analizar cómo están trabajando los métodos HTTP en las páginas web.
@@ -318,13 +318,13 @@ En fin, es una gran herramienta con la que podemos analizar cómo están trabaja
 Cada navegador posee un inspector web que es una herramienta que nos permiteexaminar y modificar la estructura y el diseño de una página. Para acceder a éste en Google Chrome se procede a  seleccionar lo que queramos de nuestra página web (puede ser un texto o una imagen), damos click derecho y nos vamos a Inspeccionar:
 
 <p align="center">
-<img src="">
+<img src="https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/1.HTML/HTML/Informe/Capturas/inspeccionar.png">
 </p>
 
 En este caso, el navegador abre una ventana donde se puede observar el código fuente de la lista no ordenada que habíamos codificado arriba. El inspector web automáticamente marca las líneas del código fuente correspondiente. Se puede modificar el elemento haciendo doble click sobre alguna propiedad, o añadiendo una en la pestaña de estilos.
 
 <p align="center">
-<img src="">
+<img src="https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/1.HTML/HTML/Informe/Capturas/inspeccionado.png">
 </p>
 
 El inspector ofrece gran cantidad de opciones para analizar por completo una página web.
