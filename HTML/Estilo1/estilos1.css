@@ -1,3 +1,11 @@
-h1 {
-    background-color: darkgreen;
-}
+ html {
+     background-color: blueviolet;
+ }
+ 
+ body {
+     background-color: greenyellow;
+ }
+ 
+ h1 {
+     color: darkblue;
+ }

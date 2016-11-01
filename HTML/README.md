@@ -87,3 +87,22 @@ En el caso de que la hoja de estilos `.css` se encuentre en otra dirección, só
   ```html
     <link rel="stylesheet" href="/SUBCARPETA/SUBCARPETA/hoja_estilo.css">
   ```
+#Estilos en cascada
+¿Qué pasa si referenciamos 2 o más estilos en el mismo elemento? Pues aquí se aplica el modelo de CSS (Cascading Style Sheets) para priorizar qué regla de estilo se aplicará en caso de que sea la misma. Para ejemplificar este caso, utilizaremos 2 hojas de estilo:
+
+ ```html
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="/Estilo1/estilos1.css">
+  ```
+En donde:
+- El fondo de `estilos.css` tiene un color `beige`
+- Y el fondo de `/Estilo1/estilos.css` tendrá un color `blueviolet`
+
+Al inspeccionar en el navegador, aparecerá que la hoja que más prioridad tiene es la que se escribió al último:
+
+![]()
+
+Obteniendo lo siguiente:
+
+![]()
+
