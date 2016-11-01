@@ -106,3 +106,29 @@ Obteniendo lo siguiente:
 
 ![]()
 
+# Bootstrap
+
+A continuación se utilizará un framework CSS de un servidor CDN llamado [Bootstrap](http://getbootstrap.com/css/). Se tiene que referenciar la hoja de estilo con la URL del servidor en la etiqueta `<link>` utilizada anteriormente:
+
+ ```html
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  ```
+Mediante este framework se puede desarrollar un **diseño responsive** que es una técnica de diseño web que busca la correcta visualización de una misma página en distintos dispositivos. Para ello, se utilizan filas de hasta 12 columnas que cambian a medida que crece el tamaño de la pantalla del dispositivo.
+
+```
+1 1 1 1 1 1 1 1 1 1 1 1 = 12
+    
+2   2   2   2   2   2   = 12
+        
+3     3     3      3    = 12
+        
+3     2   3     1  3    = 12
+```
+
+Codificando un bloque de código donde se utilizaron las etiquetas `<div>` con diferentes clases se obtendría lo siguiente:
+
+![]()
+
+Si se redimensiona la página, se puede observar cómo se ajusta a sus medidas:
+
+![]()
