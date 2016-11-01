@@ -28,3 +28,47 @@ Para declarar un arreglo, se procede:
 ```javascript
 var arregloString =['4','2','12']
 ```
+Se puede crear arreglos con varios tipos de variables:
+```javascript
+var arregloTodo = ["Anastasia",true,null,3134.24,undefined,754441];        
+```
+
+
+## JSON
+
+Como se denotan objetos de javascript, se tienen propiedades y valores. Ejemplo:
+
+```javascript
+ var persona = {
+            'nombre':'Juan',
+            'apellido':'Erazo',
+            'edad':21
+        }      
+```
+Comparandolo con XML:
+
+```xml
+<persona>
+        <nombre>Juan</nombre>
+        <apellido>Erazo</apellido>
+        <edad>21</edad>
+    </persona>
+```
+
+Se puede ver que JSON ocupa menos espacio
+
+## Funciones
+
+```javascript
+function getNombrePersona(){
+            return persona.nombre;
+        }
+```
+
+Para regresar el nombre
+
+`console.log(persona.getNombre());`
+
+Para regresar la funcion
+
+`console.log(persona.getNombre);`
