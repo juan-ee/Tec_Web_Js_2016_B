@@ -1,0 +1,29 @@
+ html {
+     background-color: beige;
+ }
+ 
+ body {
+     background-color: burlywood;
+ }
+ 
+ h1 {
+     color: aquamarine;
+ }
+ 
+ .nombreClaseNegra {
+     background-color: black;
+     font-style: italic;
+     color: antiquewhite;
+ }
+ 
+ .nombreClaseGris {
+     background-color: gainsboro;
+ }
+ 
+ .nombreClaseChocolate {
+     color: chocolate;
+ }
+ 
+ #verde {
+     color: green;
+ }

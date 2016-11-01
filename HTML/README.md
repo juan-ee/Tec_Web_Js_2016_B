@@ -60,7 +60,7 @@ En ocasiones, es necesario aplicar estilos CSS a un único elemento de la págin
 El selector de ID permite seleccionar un elemento de la página a través del valor de su atributo id. Este tipo de selectores sólo seleccionan un elemento de la página porque el valor del atributo id no se puede repetir en dos elementos diferentes de una misma página. (Referencia: [LibrosWeb](https://librosweb.es/libro/css/capitulo_2/selectores_basicos.html))
 
 Entonces, el id se lo escribe de la siguiente manera:
-```html
+```css
   #verde{
             color: green;
         }
@@ -72,3 +72,18 @@ Y para utilizarlo, lo escribimos al abrir la etiqueta:
 Lo cual desplegaría lo siguiente:
 ![]()
 
+#Hojas de estilo
+
+Ahora que se tiene una idea de cómo crear estilos con CSS, se puede guardar todo en un archivo `.css` y referenciarlo con su dirección en la cabecera html con la etiqueta `<link>`.
+
+Suponiendo que ya se ha creado un archivo llamado `estilos.css` y que se encuentra en la misma carpeta de nuestro `index.html`, para utilizar esa hoja de estilos se escribe:
+
+```html
+    <link rel="stylesheet" href="estilos.css">
+```
+
+En el caso de que la hoja de estilos `.css` se encuentre en otra dirección, sólo es cuestión de saber moverse entre las carpetas. Ejemplo:
+
+  ```html
+    <link rel="stylesheet" href="/SUBCARPETA/SUBCARPETA/hoja_estilo.css">
+  ```
