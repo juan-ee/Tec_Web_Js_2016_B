@@ -1,4 +1,5 @@
-#Etiqueta style
+# Etiqueta style
+
 Se puede definir un estilo predeterminado para cada etiqueta en la cabecera html, de la siguiente manera:
 ```html
 <style>
@@ -31,7 +32,7 @@ De esta manera, al escribir el siguiente código en `<body>`:
 Se obtendría el siguiente resultado:
 ![]()
 
-#Clases 
+# Clases 
 En CSS, se pueden utilizar clases para escribir nuestros propios estilos que serán utilizados posteriormente en las etiquetas. Ejemplo:
 
 ```css
@@ -54,7 +55,7 @@ Para utilizar el estilo de la clase, se necesita ponerle como atributo `class` c
 Se tendría el siguiente resultado:
 ![]()
 
-#Selectores de ID
+# Selectores de ID
 
 En ocasiones, es necesario aplicar estilos CSS a un único elemento de la página. Aunque puede utilizarse un selector de clase para aplicar estilos a un único elemento, existe otro selector más eficiente en este caso.
 El selector de ID permite seleccionar un elemento de la página a través del valor de su atributo id. Este tipo de selectores sólo seleccionan un elemento de la página porque el valor del atributo id no se puede repetir en dos elementos diferentes de una misma página. (Referencia: [LibrosWeb](https://librosweb.es/libro/css/capitulo_2/selectores_basicos.html))
@@ -72,7 +73,7 @@ Y para utilizarlo, lo escribimos al abrir la etiqueta:
 Lo cual desplegaría lo siguiente:
 ![]()
 
-#Hojas de estilo
+# Hojas de estilo
 
 Ahora que se tiene una idea de cómo crear estilos con CSS, se puede guardar todo en un archivo `.css` y referenciarlo con su dirección en la cabecera html con la etiqueta `<link>`.
 
