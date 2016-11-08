@@ -56,15 +56,59 @@
             c-=2;
         }*/
         
+        /*OVEJAS CON MESES MULTIPLOS DE 4
         var ov=4,mes=1,tot=12;
         for(var mes;mes<=12;mes++){
             ov*=4;            
             console.log('Habra '+ov+' ovejas despues de '+mes+' mes');   
-            if(ov>10000){
+            if(mes%4===0){
+                console.log(ov*3/4+' fueron removidas (75%)');
+                ov/=4;                
+            }else if(ov>10000){
                 ov/=2;
                 console.log(ov+' fueron enviadas a otra region');   
             }
+            
+        } */               
+        
+        
+        /* PROMPT
+        var text=prompt("Cuanto dinero tienes?");
+        
+        console.log(text);*/
+        
+                        
+        //MULTIPLICAR
+        function multiplicar(a, b, c){
+            return a*b*c;
+        }
+        
+        console.log(multiplicar(3,4,5));
+        
+        //MAYOR ENTRE 2 NUMEROS
+        
+        function mayor(a,b){
+            if(a>b){
+                console.log(a +' es mayor');
+            }else if(a<b){               
+                console.log(b +' es mayor');
+            }else{
+                console.log('son iguales');
+            }
+        }
+        mayor(3,3);
+        mayor(5,3);
+        mayor(3,5);
+        
+        //MYSTERY
+        function mystery(x,y){
+            return y*(4*x+3)+5;
         }        
+        console.log(mystery(4,7));
+        
+        
+        
+        
     </script>
 
 </head>
