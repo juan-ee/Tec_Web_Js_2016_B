@@ -35,10 +35,10 @@ El tema de la práctica es: `Diseño, Calidad, WAI, Validación, SEO Web y Boots
 
 <a name="objetivos"></a>
 ## Objetivos
-- 
-- 
-- 
-- 
+- Aprender sobre las normas del diseño web.
+- Conocer las características de la calidad de una página web.
+- Asimilar ciertos estándares web.
+- Utilizar el framework de bootstrap.
 
 <a name="marco-teorico"></a>
 ## Marco Teórico
@@ -196,16 +196,16 @@ SEO puede requerir cambios al código HTML y al contenido en general. Durante el
 Para el desarrollo del actual informe, se seguirá utilizando el framework CSS de Bootstrap que quedó a medias la anterior vez:
 
 <a name="etiquetas"></a>
-#### Etiquetas
+### Etiquetas
 Bootstrap cuenta con sus propias etiquetas como las siguientes:
 
 - La etiqueta `<small>` se utiliza para mostrar un bloque de texto de poca importancia:
 
     ```html
-        <h1>Este texto es importante <small>(Ejemplo sin importancia)</small> </h1>
+        <h1>Este texto es importante <small>(Ejemplo sin importancia)</small></h1>
     ```
     
-    ![small]()
+    ![small](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/3.BOOTSTRAP/Informe/Im%C3%A1genes/1.png)
 
 - La etiqueta `<code>` permite escribir código fuente de programación en la página:
 
@@ -214,13 +214,13 @@ Bootstrap cuenta con sus propias etiquetas como las siguientes:
             printf("Hola mundo");                      
         </code>           
     ```  
-    ![code]()
+    ![code](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/3.BOOTSTRAP/Informe/Im%C3%A1genes/2.png)
     
 - La etiqueta `<kbd>` informa la entrada por teclado que debe introducir el usuario.
     ```html
         <p>La combinacion <kbd>ctrl + C</kbd> permite copiar informacion en la memoria</p>
     ```    
-    ![KBD]()
+    ![KBD](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/3.BOOTSTRAP/Informe/Im%C3%A1genes/3.png)
 
 <a name="conrec"></a>
 
@@ -228,7 +228,7 @@ Bootstrap cuenta con sus propias etiquetas como las siguientes:
 
 ---
 <a name="forms"></a>
-#### Forms
+### Forms
 Bootstrap nos permite integrar forms para obtener información desde los usuarios. Ejm:
 ```html
     <div class="container">
@@ -252,14 +252,14 @@ Bootstrap nos permite integrar forms para obtener información desde los usuario
         </div>
     </div>
 ```
- ![Form]()
+ ![Form](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/3.BOOTSTRAP/Informe/Im%C3%A1genes/4.png)
  
 <a href="#cabecera">Volver a la cabecera</a>
 
 ---
 
 <a name="tablas"></a>
-#### Tablas
+### Tablas
 Incorporar tablas en nuestra página web es bastante sencillo. El siguiente es un claro ejemplo de una tabla con bordes:
 ```html
     <table class="table table-bordered">
@@ -280,15 +280,14 @@ Incorporar tablas en nuestra página web es bastante sencillo. El siguiente es u
         </tr>
     </table>
 ```
- ![Tabla]()
+ ![Tabla](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/3.BOOTSTRAP/Informe/Im%C3%A1genes/5.png)
  
 <a href="#cabecera">Volver a la cabecera</a>
 
 ## Conclusiones y Recomendaciones
 
-- 
-- 
-- 
-- 
+- Se debe tomar en cuenta varios parámetros como la velocidad de descarga, el tamaño de monitores de los usuarios, los complementos, etc. para un correcto diseño de una página web.
+- También es de suma importancia desarrollar páginas webs orientadas a usuarios que tengan alguna discapacidad.
+- Se recomienda un verificador para comprobar que nuestra página web carezca de errores antes de publicarla.
 
 <a href="#cabecera">Volver a la cabecera</a>
