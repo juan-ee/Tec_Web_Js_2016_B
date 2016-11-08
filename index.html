@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Clase de Javascript</title>
     <script>
-        var count=10;
+        /*var count=10;
         var arregloNumero=[];
         
         while(count>0){            
@@ -25,15 +25,46 @@
                 
         console.log(arregloNumero);
         
-        var ov=4,mes=1,tot=12;
         
-        while(mes<12){
+        //OVEJAS WHILE
+        var ov=4,mes=1,tot=12;
+                
+        while(mes<=12){
             ov*=4;
             console.log('Habra '+ov+' ovejas despues de '+mes+' mes');            
             mes++;
-        }
+        }*/
+        
+        /*FOR DESCENDENTE
+        for(var i=10;i>0;i--){
+            console.log(i);
+        }*/
         
         
+        /*OVEJAS FOR
+        var ov=4,mes=1,tot=12;
+        for(var mes;mes<=12;mes++){
+            ov*=4;
+            console.log('Habra '+ov+' ovejas despues de '+mes+' mes');   
+        }*/
+        
+       /*PARES
+        var c=10;
+        
+        while(c>2){
+            console.log(c);
+            c-=2;
+        }*/
+        
+        var ov=4,mes=1,tot=12;
+        for(var mes;mes<=12;mes++){
+            ov*=4;            
+            console.log('Habra '+ov+' ovejas despues de '+mes+' mes');   
+            if(ov>10000){
+                ov/=2;
+                console.log(ov+' fueron enviadas a otra region');   
+            }
+        }        
     </script>
 
 </head>
