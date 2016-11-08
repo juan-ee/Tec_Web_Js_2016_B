@@ -1,95 +1,61 @@
-# Repositorio de tecnologías web con Js
-Este repositorio forma parte del [Curso de tecnologías web](https://github.com/adrianeguez/Tec_Web_Js_2016_B)
+# Diseño, calidad, WAI, Validación, Seo
+
+<p align="center">
+<img src="http://web-on.es/wp-content/uploads/2014/11/foto-portada-webon.png" width="300" height="200">
+</p>
+
+### Materia : `Tecnologías Web con JavaScript`
+### Tema : `Diseño, calidad, WAI, Validación, Seo` 
+### Fecha : `2016-11-08`
+### Estudiante : `Juan Erazo`
+### Profesor : `Tania Calle - Adrian Eguez`
+### Número de informe : `3`
+
+<a name="cabecera"></a>
+## Índice de contenidos
 
 
-# Tec_Web_Js_2016_B
-Curso de Tecnologías Web con Javascript
+- <a href="#tema">Tema</a>
+- <a href="#objetivos">Objetivos</a>
+- <a href="#marco-teorico">Marco Teórico</a>
+    * 
+- <a href="#desarrollo">Desarrollo de la Práctica</a>
+    * 
+- <a href="#conrec">Conclusiones y Recomendaciones</a>     
 
-## Enfasis de texto
-* Para nosotros utilizar un texto en **negrilla** se utilizan dos "**"
-* Un texto en *cursiva* simplemente utiliza un asterisco "*".
-* Para tachar ~~un texto~~ se utiliza virbolillas "~~".
+<a name="tema"></a>
+## Tema
+El tema de la práctica es: `Aprendiendo CSS`
 
-## Listas ordenadas
-1. Para enumerar
-2. ordenadamente se utiliza
-3. un numero, punto
-4. y espacio
-5. Ejemplo de listasz no ordenadas
- * lista no ordenada 1 (dos espacios antes del asterisco)
- * lista no ordenada 2 (dos espacios antes del asterisco)
-6. Ejemplo listas ordenadas
- 1. holaaa
- 2. heey
- 
-## Links
-Para utilizar un [link](https://github.com/adrianeguez/Tec_Web_Js_2016_B) se debe encerrar un comentario entre corchetes y luego el link entre parentesis
+<a name="objetivos"></a>
+## Objetivos
+- 
+- 
+- 
+- 
 
-## Imagenes
-Para las imagenes, lo mismo que un link pero se precede con una exclamación
-![Imagen de NIRVANA](http://vignette3.wikia.nocookie.net/nirvana/images/8/80/Nirvana-Wallpaper.jpg/revision/latest?cb=20130412204553 "Nirvana")
+---
+<a name="marco-teorico"></a>
+## Marco Teórico
 
-## Formateo de codigo
-Para utilizar el formateo del codigo dentro del texto plano se utiliza la `tilde invertida`
+<a href="#cabecera">Volver a la cabecera</a>
 
-Para utilizar el formateo del codigo de un lenguaje determinado se utiliza 3 `tildes invertidas`
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-Otro bloque, pero para comandos:
-```
->sudo su
->rm -r /
+---
+<a name="desarrollo"></a>
+## Desarrollo del informe
 
-```
-Otro bloque, pero para html:
-```html
-<html>
-    <body>
-    </body>
-</html>
-```
-## Tablas
-Para las tablas,se las dibuja con |
 
-| Tables        | Are           | Cool  |
-| --- | --- | --- |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+<a href="#cabecera">Volver a la cabecera</a>
 
-| sirve | o no  | tabla |
-| --- | --- | --- |      
-| sirve | vamos | si !  |
-
-## Citas (de texto)
-
-> Y si me matas, ¿Me muero?
-
-> Señoras y señores,
-
-> Este es mi jodido repositorio
-
-La famosa frase:
-
-> Emociones a flor de piel
-
-## Separadores (reglas horizontales)
-
-Se utilizan 3 guiones,puntos,asteriscos seguidos "_"
-
-pin
 
 ---
 
-pon
+<a name="conrec"></a>
+## Conclusiones y Recomendaciones
 
+- 
+- 
+- 
+- 
 
-## Videos de youtube
-
-Se usa cogido html para verlos, se puede poner una imagen de fondo :D
-
-<a href="https://www.youtube.com/watch?v=SDH2ghIV67o
-" target="_blank"><img src="https://i.ytimg.com/vi/6ySPNY6gmBo/hqdefault.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="#cabecera">Volver a la cabecera</a>
