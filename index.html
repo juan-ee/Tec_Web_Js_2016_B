@@ -5,115 +5,35 @@
     <meta charset="UTF-8">
     <title>Clase de Javascript</title>
     <script>
-        console.log('No leas esto');
-
-        //VARIABLES
-
-        //        var texto="Strawberry fields"
-        //        console.log(texto);
-        //        
-        //        var textoNumero="5"  
-        //        console.log('valor cuando es string:');
-        //        console.log(textoNumero);
-        //        
-        //        textoNumero=6;
-        //        console.log('valor cunado es numero');
-        //        console.log(textoNumero);        
-        //        
-        //        var numero=1;
-        //        console.log(numero);
-        //        
-        //        var float = 3.14;
-        //        console.log(float);
-        //        
-        //        textoNumero=float;
-        //        console.log('valor cunado es float');
-        //        console.log(textoNumero);   
-        //        
-        //        var boolTrue = true;
-        //        console.log(boolTrue);
-        //        textoNumero=boolTrue;
-        //        console.log('valor cunado es bool');
-        //        console.log(textoNumero);  
-        //        
-        //        
-        //        var boolFalse = false;
-        //        console.log(boolFalse);
-        //        textoNumero=boolFalse;
-        //        console.log('valor cunado es boolFalse');
-        //        console.log(textoNumero);  
-        //        
-        //        var varNull = null;
-        //        console.log(varNull);
-        //
-        //        var varUndefined = undefined;
-        //        console.log(varUndefined);
-
-        //ARREGLOS
-        //        var arregloString =['4','2','12']
-        //        console.log(arregloString);
-        //        
-        //         var arregloNum =[4,2,10]
-        //        console.log(arregloNum);
-        //        
-        //         var arregloBool =[true, false, false, true]
-        //        console.log(arregloBool);
-        //        
-        //        var arregloTodo = ["Anastasia",true,null,3134.24,undefined,754441];
-        //        console.log(arregloTodo);
-
-        //JSON
-        var persona = {
-            'nombre': 'Juan',
-            'apellido': 'Erazo',
-            'edad': 21,
-            mascotas: ['Rey', 'Princesa', 'Tequila'],
-            hermanos: [{
-                'nombre': 'Ale',
-                'edad': '21'
-            }, {
-                'nombre': 'Br',
-                'edad': '13'
-            }],
-            getNombre: function() {
-                return persona.nombre;
-            },
-            setNombre: function(nomb) {
-                this.nombre = nomb;
+        var count=10;
+        var arregloNumero=[];
+        
+        while(count>0){            
+            if(count%2===0){
+                console.log(count+' es par');
+            }else{
+                console.log(count+' es impar');
             }
+            
+            arregloNumero.push(count);
+            count--;            
         }
-
-        console.log('Nombre: '+persona.nombre);
-        persona.setNombre('Martin')
-        console.log('Nombre: '+persona.nombre);
+                
         
-//        console.log('Acceder al nombre')
-//        console.log(persona.nombre);
-//        console.log('Acceder al apellido')
-//        console.log(persona.apellido);        
-//        console.log('Acceder a los hermanos')
-//        console.log(persona.hermanos);
-//        console.log('Acceder al nombre')
+        arregloNumero.pop();
+        arregloNumero.splice(3,1,666);
+                
+        console.log(arregloNumero);
         
-        //para regresar el nombre
-        console.log(persona.getNombre());
-        //para regresar la funcion
-        console.log(persona.getNombre);
+        var ov=4,mes=1,tot=12;
         
-        function getNombrePersona(){
-            return persona.nombre;
+        while(mes<12){
+            ov*=4;
+            console.log('Habra '+ov+' ovejas despues de '+mes+' mes');            
+            mes++;
         }
         
-        console.log(getNombrePersona());
         
-        console.log(persona);
-        //XML    
-        /*<persona>
-        <nombre>Juan</nombre>
-        <apellido>Erazo</apellido>
-        <edad>21</edad>
-        </persona>
-        */
     </script>
 
 </head>
