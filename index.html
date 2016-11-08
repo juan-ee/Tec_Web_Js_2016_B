@@ -78,14 +78,15 @@
         console.log(text);*/
         
                         
-        //MULTIPLICAR
+        /*//MULTIPLICAR
         function multiplicar(a, b, c){
             return a*b*c;
         }
         
         console.log(multiplicar(3,4,5));
+        */
         
-        //MAYOR ENTRE 2 NUMEROS
+        /*//MAYOR ENTRE 2 NUMEROS
         
         function mayor(a,b){
             if(a>b){
@@ -99,15 +100,41 @@
         mayor(3,3);
         mayor(5,3);
         mayor(3,5);
-        
-        //MYSTERY
+        */
+        /*//MYSTERY
         function mystery(x,y){
             return y*(4*x+3)+5;
         }        
         console.log(mystery(4,7));
+        */
         
         
+        /*RANGERS
+        function feedPerRanger(ovejas,rangers){
+            alert('Cada ranger debe dar de comer' + (ovejas*2/rangers).toFixed(2) +' libras')
+        }
         
+        feedPerRanger(45,23);*/
+        
+        /*ACCEDER A UN VALOR
+        var movie1= [16,"Candles"];
+        var movie2= [3,"Men","and","a","Baby"]
+        var eightiesMovies=[movie1,movie2];
+        
+        var infant=eightiesMovies[1][4];            
+        
+        console.log(infant);        */
+        
+        
+        //IMPRIMIR NUMERO ARRAYAS
+        var arr=[1,'dos',3,'cuatro',5,'seis',7],c=0,i=0;                        
+        while(i<arr.length){
+            if(typeof(arr[i])==='string'){
+                c++;
+            }
+            i++;
+        }
+        console.log('Hay '+c+' strings')
         
     </script>
 
