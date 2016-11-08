@@ -22,9 +22,11 @@
     * <a href="#calidad">Calidad</a>
     * <a href="#wai">WAI</a>
     * <a href="#validacion">Validación</a>
-    * <a href="#SEO">SEO</a>
+    * <a href="#seo">SEO</a>
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
-    * 
+    * <a href="#etiquetas">Etiquetas</a>
+    * <a href="#forms">Forms</a>
+    * <a href="#tablas">Tablas</a>
 - <a href="#conrec">Conclusiones y Recomendaciones</a>     
 
 <a name="tema"></a>
@@ -191,9 +193,97 @@ SEO puede requerir cambios al código HTML y al contenido en general. Durante el
 
 <a name="desarrollo"></a>
 ## Desarrollo del informe
+Para el desarrollo del actual informe, se seguirá utilizando el framework CSS de Bootstrap que quedó a medias la anterior vez:
 
+<a name="etiquetas"></a>
+#### Etiquetas
+Bootstrap cuenta con sus propias etiquetas como las siguientes:
+
+- La etiqueta `<small>` se utiliza para mostrar un bloque de texto de poca importancia:
+
+    ```html
+        <h1>Este texto es importante <small>(Ejemplo sin importancia)</small> </h1>
+    ```
+    
+    ![small]()
+
+- La etiqueta `<code>` permite escribir código fuente de programación en la página:
+
+    ```html        
+        <code>        
+            printf("Hola mundo");                      
+        </code>           
+    ```  
+    ![code]()
+    
+- La etiqueta `<kbd>` informa la entrada por teclado que debe introducir el usuario.
+    ```html
+        <p>La combinacion <kbd>ctrl + C</kbd> permite copiar informacion en la memoria</p>
+    ```    
+    ![KBD]()
 
 <a name="conrec"></a>
+
+<a href="#cabecera">Volver a la cabecera</a>
+
+---
+<a name="forms"></a>
+#### Forms
+Bootstrap nos permite integrar forms para obtener información desde los usuarios. Ejm:
+```html
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>            
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Checkear
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+```
+ ![Form]()
+ 
+<a href="#cabecera">Volver a la cabecera</a>
+
+---
+
+<a name="tablas"></a>
+#### Tablas
+Incorporar tablas en nuestra página web es bastante sencillo. El siguiente es un claro ejemplo de una tabla con bordes:
+```html
+    <table class="table table-bordered">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+```
+ ![Tabla]()
+ 
+<a href="#cabecera">Volver a la cabecera</a>
+
 ## Conclusiones y Recomendaciones
 
 - 
