@@ -20,6 +20,8 @@
         funcion();
         vieja();*/
         
+        
+        /*FUNCION MAP
         var pasajeros=[
             ['Tomas','Arias'],
             ['Luis','Reinoso'],
@@ -31,6 +33,36 @@
             return arr[0]+' '+arr[1];
         });
         console.log(nombres_modificados);
+        */
+        
+        /*var pasajeros=[
+            ['Tomas','Arias'],
+            ['Luis','Reinoso'],
+            ['Tom','Mar'],
+            ['Chino','Chung']
+        ]
+
+        var nombres_modificados=pasajeros.map(function(arr){
+            return arr[0]+' '+arr[1];
+        });
+        
+        nombres_modificados.map(function(arr){
+            alert('Yo '+arr);
+        });*/
+        
+            
+        
+        var puzzlers=[
+            function(inp){return 3*inp-8},
+            function(inp){return Math.pow(inp+2,3)},
+            function(inp){return Math.pow(inp,2)-9},
+            function(inp){return inp%4}
+        ]                         
+                         
+        console.log(puzzlers[0](7));
+        console.log(puzzlers[1](7));
+        console.log(puzzlers[2](7));
+        console.log(puzzlers[3](7));
         
     </script>
 
