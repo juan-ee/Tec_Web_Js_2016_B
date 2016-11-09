@@ -5,136 +5,32 @@
     <meta charset="UTF-8">
     <title>Clase de Javascript</title>
     <script>
-        /*var count=10;
-        var arregloNumero=[];
         
-        while(count>0){            
-            if(count%2===0){
-                console.log(count+' es par');
-            }else{
-                console.log(count+' es impar');
-            }
-            
-            arregloNumero.push(count);
-            count--;            
-        }
-                
-        
-        arregloNumero.pop();
-        arregloNumero.splice(3,1,666);
-                
-        console.log(arregloNumero);
-        
-        
-        //OVEJAS WHILE
-        var ov=4,mes=1,tot=12;
-                
-        while(mes<=12){
-            ov*=4;
-            console.log('Habra '+ov+' ovejas despues de '+mes+' mes');            
-            mes++;
-        }*/
-        
-        /*FOR DESCENDENTE
-        for(var i=10;i>0;i--){
-            console.log(i);
-        }*/
-        
-        
-        /*OVEJAS FOR
-        var ov=4,mes=1,tot=12;
-        for(var mes;mes<=12;mes++){
-            ov*=4;
-            console.log('Habra '+ov+' ovejas despues de '+mes+' mes');   
-        }*/
-        
-       /*PARES
-        var c=10;
-        
-        while(c>2){
-            console.log(c);
-            c-=2;
-        }*/
-        
-        /*OVEJAS CON MESES MULTIPLOS DE 4
-        var ov=4,mes=1,tot=12;
-        for(var mes;mes<=12;mes++){
-            ov*=4;            
-            console.log('Habra '+ov+' ovejas despues de '+mes+' mes');   
-            if(mes%4===0){
-                console.log(ov*3/4+' fueron removidas (75%)');
-                ov/=4;                
-            }else if(ov>10000){
-                ov/=2;
-                console.log(ov+' fueron enviadas a otra region');   
-            }
-            
-        } */               
-        
-        
-        /* PROMPT
-        var text=prompt("Cuanto dinero tienes?");
-        
-        console.log(text);*/
-        
-                        
-        /*//MULTIPLICAR
-        function multiplicar(a, b, c){
-            return a*b*c;
+        /*FUNCIONES
+        //Anonima
+        var funcion=function(){
+            console.log('nueva');
         }
         
-        console.log(multiplicar(3,4,5));
-        */
-        
-        /*//MAYOR ENTRE 2 NUMEROS
-        
-        function mayor(a,b){
-            if(a>b){
-                console.log(a +' es mayor');
-            }else if(a<b){               
-                console.log(b +' es mayor');
-            }else{
-                console.log('son iguales');
-            }
-        }
-        mayor(3,3);
-        mayor(5,3);
-        mayor(3,5);
-        */
-        /*//MYSTERY
-        function mystery(x,y){
-            return y*(4*x+3)+5;
+        //Declarativa
+        function vieja(){
+            console.log('vieja');
         }        
-        console.log(mystery(4,7));
-        */
         
+        funcion();
+        vieja();*/
         
-        /*RANGERS
-        function feedPerRanger(ovejas,rangers){
-            alert('Cada ranger debe dar de comer' + (ovejas*2/rangers).toFixed(2) +' libras')
-        }
-        
-        feedPerRanger(45,23);*/
-        
-        /*ACCEDER A UN VALOR
-        var movie1= [16,"Candles"];
-        var movie2= [3,"Men","and","a","Baby"]
-        var eightiesMovies=[movie1,movie2];
-        
-        var infant=eightiesMovies[1][4];            
-        
-        console.log(infant);        */
-        
-        
-        //IMPRIMIR NUMERO ARRAYAS
-        var arr=[1,'dos',3,'cuatro',5,'seis',7],c=0,i=0;                        
-        while(i<arr.length){
-            if(typeof(arr[i])==='string'){
-                c++;
-            }
-            i++;
-        }
-        console.log('Hay '+c+' strings')
+        var pasajeros=[
+            ['Tomas','Arias'],
+            ['Luis','Reinoso'],
+            ['Tom','Mar'],
+            ['Chino','Chung']
+        ]
+
+        var nombres_modificados=pasajeros.map(function(arr){
+            return arr[0]+' '+arr[1];
+        });
+        console.log(nombres_modificados);
         
     </script>
 
