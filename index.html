@@ -51,7 +51,7 @@
         });*/
         
             
-        
+        /*PUZZLERS
         var puzzlers=[
             function(inp){return 3*inp-8},
             function(inp){return Math.pow(inp+2,3)},
@@ -63,6 +63,33 @@
         console.log(puzzlers[1](7));
         console.log(puzzlers[2](7));
         console.log(puzzlers[3](7));
+        */
+        
+        var userChoise=prompt("1 2 o 3");
+        
+        function adventureSelector(userChoise){
+            userChoise=parseInt(userChoise);
+            switch(userChoise){
+                case 1:
+                    return function(){
+                        console.log("Has seleccionado Vines of Doom!");
+                    }
+                    break;
+                case 2:
+                    return function(){
+                        console.log("Luces como si quisieras Lake of Dispair!");
+                    }
+                    break;
+                case 3:
+                    return function(){
+                        console.log("Caves of Catastrophe!");
+                    }
+                    break;                                                        
+            }
+        }
+        
+        
+        adventureSelector(userChoise)();
         
     </script>
 
