@@ -65,6 +65,8 @@
         console.log(puzzlers[3](7));
         */
         
+        
+        /*ADVENTURE SELECTOR
         var userChoise=prompt("1 2 o 3");
         
         function adventureSelector(userChoise){
@@ -86,10 +88,28 @@
                     }
                     break;                                                        
             }
-        }
+        }                
+        adventureSelector(userChoise)();*/
         
         
-        adventureSelector(userChoise)();
+        //QUEUE BUILDER
+         var puzzlers=[
+            function(inp){return 8*inp-10},
+            function(inp){return Math.pow(inp-3,3)},
+            function(inp){return Math.pow(inp,2)+4},
+            function(inp){return inp%5}
+        ]   
+                                  
+         var applyAndEmpty=function(inp,queue){
+             var n=queue.length;
+             for(var i=0;i<n;i++){
+                 inp=queue[0](inp);                 
+                 queue.shift();
+             }
+             return inp;
+         }         
+        console.log(applyAndEmpty(2,puzzlers))
+        console.log(puzzlers)
         
     </script>
 
