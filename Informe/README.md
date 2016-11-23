@@ -89,4 +89,11 @@ Como se puede ver, para descargar el paquete se utiliza:
     }
 ```
 
-Antes de actualizar se debe cambiar la version en el jason
+Antes de actualizar se debe cambiar la version en el jason y luego hacer el `npm publish`
+
+### En otra aplicaciones
+
+```
+var calculadora=requiere("paquete")
+console.log(calculadora.funcion)
+```
