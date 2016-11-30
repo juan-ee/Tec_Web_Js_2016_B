@@ -4,18 +4,23 @@ var app = express(); //ejecutamos la funcion express
 var usuarios=[
     {
         id:1,
-        nombre:'Pepe'
+        nombre:'Pepe',
+        cadula:'111'
     },
     {
         id:2,
-        nombre:'Alicia'
+        nombre:'Alicia',
+        cadula:'222'
     },
     {
         id:3,
-        nombre:'Janeth'
+        nombre:'Janeth',
+        cadula:'333'
     }
     
 ]
+
+var cont=usuarios.length;
 
 app.get('/Usuarios/:id', function (req, res) { //Para leer parametros y responder de acuerdo a eso    
     
@@ -34,7 +39,30 @@ app.get('/Usuarios/:id', function (req, res) { //Para leer parametros y responde
 });
 
 app.get('/Usuarios', function (req, res) { //Para leer parametros y responder de acuerdo a eso                
+        
+    
+    if(!req.query.nombre){
+        res.send('No enviaste el nombre boludo');
+    }
+    
+    if(!req.query.cedula){
+      res.send('No enviaste la cedula');  
+    }
+    
+    console.log(usuarios.length);
+    
+    var nuevo={
+        id:++cont,
+        nombre:req.query.nombre,
+        cedula:req.query.cedula        
+    }
+    
+    usuarios.push(nuevo)
+    
     res.json(usuarios);
+    
+    
+    //res.json(usuarios);
     
 });
 
