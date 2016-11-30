@@ -15,8 +15,15 @@ app.get('/', function (req, res) {
 
 
 app.post('/TecnologiasWeb', function (req, res) {
+        
     console.log('REQUEST:');
     console.log(req.headers);
+
+ 
+    res.append('token','1234');//agrega un atributo 'token' a la cabecera de respuesta
+    
+    console.log('RESPONSE:');
+    console.log(res.headers);
 
 
     //res.send('con post!');    
@@ -28,11 +35,13 @@ app.post('/TecnologiasWeb', function (req, res) {
         nombre: 'Juan',
         cedula: '1718269671'
     }
+    
+    usuario.mascotas=['Rey']; //agregue unas mascotas
+    usuario.soltero=true; //agregue un bool al json
 
     res.json(usuario);
 
-        console.log('RESPONSE:');
-    console.log(res.headers);
+
 
 });
 
