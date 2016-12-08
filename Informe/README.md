@@ -139,6 +139,6 @@ Como se puede ver, para descargar el paquete se utiliza:
 ## Conclusiones y Recomendaciones
 
 - Npm facilita la compartición y reúso de código para los desarrolladores de javascript.
-- Se puede encontrar gran variedad de paquetes colgados en el repositorio.
+- Gracias a npm, se puede encontrar fácilmente la solución a un problema por  la gran variedad de paquetes colgados en el repositorio online.
 
 <a href="#cabecera">Volver a la cabecera</a>
