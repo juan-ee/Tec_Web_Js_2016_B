@@ -1,27 +1,77 @@
-# Node.js
+# NPM (Node Packet Manager)
 
-El node es un compilador de javascript
-NPM es un gestionador de paquetes de Node
+<p align="center">
+<img src="http://www.sergiolepore.net/images/misc/npm.png" width="300" height="200">
+</p>
 
-## Para leer archivos
+### Materia : `Tecnologías Web con JavaScript`
+### Tema : `Diseño, calidad, WAI, Validación, Seo` 
+### Fecha : `2016-12-08`
+### Estudiante : `Juan Erazo`
+### Profesor : `Tania Calle - Adrian Eguez`
+
+<a name="cabecera"></a>
+## Índice de contenidos
+
+
+- <a href="#tema">Tema</a>
+- <a href="#objetivos">Objetivos</a>
+- <a href="#marco-teorico">Marco Teórico</a>
+    * <a href="#npm">¿Qué es Npm?</a>
+- <a href="#desarrollo">Desarrollo de la Práctica</a>
+    * <a href="#instalacion">Instalación de paquetes</a>
+    * <a href="#app_simple">Creación de una aplicación simple</a>
+    * <a href="#carga">Carga de paquetes en el repositorio</a>    
+- <a href="#conrec">Conclusiones y Recomendaciones</a>     
+
+<a name="tema"></a>
+## Tema
+El tema de la práctica es: `NPM`
+
+<a name="objetivos"></a>
+## Objetivos
+- Aprender a utilizar el gestor de pquetes de Node
+- Crear un paquete personalizado y subirlo al repositorio online npm
+
+---
+<a name="marco-teorico"></a>
+## Marco Teórico
+
+<a name="npm"></a>
+### ¿Qué es Npm?
+**npm** es el manejador de paquetes por defecto para Node.js, un entorno de ejecución para JavaScript.
+
+Desde la versión 0.6.3 de Node.js npm es instalado automáticamente con el entorno. npm se ejecuta desde la linea de comandos y maneja las dependencias para una aplicación. Además, permite a los usuarios instalar aplicaciones Node.js que se encuentran en el repositorio. npm está escrito enteramente en JavaScript y fue desarrollado por Isaac Z. Schlueter a raíz de la frustración que experimentó mientras trabajando con **CommonJS** y considerando las deficiencias de otros proyectos similares como **PHP** y **Perl**.
+
+En noviembre 2014, Collin Winter escribió en GitHub que "npm" no es una abreviatura para "Node Package Manager", sino un retroacrónimo recursivo para "npm is not an acronym". Aún así, en el archivo README.md encontrado en npm-0.0.1 se puede leer en la primera línea: "The Node Package Manager".
+
+Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Retroacr%C3%B3nimo)
+ 
+<a href="#cabecera">Volver a la cabecera</a>
+
+---
+<a name="desarrollo"></a>
+## Desarrollo del informe
+
+<a name="instalacion"></a>
+### Instalación de paquetes
+Existe una gran variedad de paquetes en el repositorio online de npm que se pueden instalar de acuerdo a nuestras necesidades. Algunos ejemplos:
+
+##### Paquete para leer archivos:
 Todos los paquetedes del Node son nativos usamos `filesystem`
 
-## Para conectar con la base de datos
+##### Para realizar conexiones con base de datos:
+
 `$ npm install mysql`
-conectar con bases de datos
 
+##### Para un servidor http estatico:
+`$ npm install express`
 
-## Para un http server estatico
-`$ npm install express --save`
-Debemos escuchar peticiones http
-
-## Para enviar correos
+##### Para enviar correos:
 `$ npm install nodemailer`
-SIemplemente lo encontramos en google
 
-
-
-## Aplicacion
+<a name="app_simple"></a>
+### Creación de una aplicación simple
 
 Si creamos una pequeña aplicación que sume dos números en un archivo `app.js` :
 
@@ -34,10 +84,13 @@ console.log(n1 + n2);
 Para ejecutarlo desde la consola, se lo hace con el comando:
 
 `node app.js`
-que nos dara el resultado de 9
 
-## Creacion de nuestros proprios paquetes
+Tras la ejecución, se obtendrá el valor de 9:
 
+[]()!
+
+<a name="carga"></a>
+### Carga de paquetes en el repositorio
 Empezamos con un `NPM init`
 
 Crea un paquete npm
@@ -74,26 +127,20 @@ Se puede descargarlo desde la pagina web, accediendo al nombre del paquete en la
 ![]()
 
 Como se puede ver, para descargar el paquete se utiliza:
+
 `npm i tecnologiasweb_erazoj`
 
 
-### Exportar objetos
+<a href="#cabecera">Volver a la cabecera</a>
 
-```js
-    module.exports = {
-        imprimir_suma: imprimir_suma,
-    }
+---
 
-    function imprimir_suma(n1, n2) {
-        console.log(n1 + n2);
-    }
-```
+<a name="conrec"></a>
+## Conclusiones y Recomendaciones
 
-Antes de actualizar se debe cambiar la version en el jason y luego hacer el `npm publish`
+- 
+- 
+- 
+- 
 
-### En otra aplicaciones
-
-```
-var calculadora=requiere("paquete")
-console.log(calculadora.funcion)
-```
+<a href="#cabecera">Volver a la cabecera</a>
