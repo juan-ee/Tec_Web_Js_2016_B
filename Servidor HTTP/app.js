@@ -91,7 +91,7 @@ app.get('/', function (req, res) {
                             fs.readFile('./paginas/pagina2.html', 'utf8',
                             function(error,archivoLeido) {                
                                 str+=archivoLeido;
-                                res.send(archivoLeido)
+                                res.send(str)
                             }) 
                         }) 
                 })     
