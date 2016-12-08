@@ -33,7 +33,6 @@ El tema de la práctica es: `NPM`
 - Aprender a utilizar el gestor de pquetes de Node
 - Crear un paquete personalizado y subirlo al repositorio online npm
 
----
 <a name="marco-teorico"></a>
 ## Marco Teórico
 
@@ -87,7 +86,7 @@ Para ejecutarlo desde la consola, se lo hace con el comando:
 
 Tras la ejecución, se obtendrá el valor de 9:
 
-[]()!
+![Programa](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/07-Node1/Informe/Imagenes/1.png)
 
 <a name="carga"></a>
 ### Carga de paquetes en el repositorio
@@ -119,12 +118,13 @@ Crea un paquete npm
 ```
 
 Para publicar se debe:
-- tener un usuario en npmjs.com
-- hacer login `npm login`
-- de ahi se publica el paquete con `npm publish`
+- Tener un usuario en npmjs.com
+- Hacer login con `npm login`
+- Finalmente publicar el paquete con `npm publish`
 
-Se puede descargarlo desde la pagina web, accediendo al nombre del paquete en la pagina web:
-![]()
+Se puede descargarlo desde la página web, accediendo al nombre del paquete en la pagina web:
+
+![Repo](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/07-Node1/Informe/Imagenes/2.png)
 
 Como se puede ver, para descargar el paquete se utiliza:
 
@@ -138,9 +138,7 @@ Como se puede ver, para descargar el paquete se utiliza:
 <a name="conrec"></a>
 ## Conclusiones y Recomendaciones
 
-- 
-- 
-- 
-- 
+- Npm facilita la compartición y reúso de código para los desarrolladores de javascript.
+- Se puede encontrar gran variedad de paquetes colgados en el repositorio.
 
 <a href="#cabecera">Volver a la cabecera</a>
