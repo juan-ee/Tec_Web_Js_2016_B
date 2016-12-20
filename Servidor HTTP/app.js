@@ -86,17 +86,17 @@ app.get('/', function (req, res) {
                 function(error,archivoLeido) {                
                 str+=archivoLeido;
                       fs.readFile('./paginas/pagina1.html', 'utf8',
-                        function(error,archivoLeido) {                
-                          str+=archivoLeido;
+                        function(error,archivoLeido1) {                
+                          str+=archivoLeido1;
                             fs.readFile('./paginas/pagina2.html', 'utf8',
-                            function(error,archivoLeido) {                
-                                str+=archivoLeido;
+                            function(error,archivoLeido2) {                
+                                str+=archivoLeido2;
                                 res.send(str)
                             }) 
                         }) 
                 })     
 
-    res.send(str);
+   // res.send(str);
     //console.log('2 parece que termino de leer');
     
     
