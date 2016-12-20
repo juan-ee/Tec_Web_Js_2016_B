@@ -37,3 +37,19 @@ El servidor web de sails se encuentra localizado en la carpeta **assets**
 Todo lo que está en  **assets** es público
 
 Nos vamos a assets, creamos la carpeta App, creamos 3 archivos index.html, estilos.css y un app.js
+
+
+## Generar controladores en Sailsjs
+Para generar controladores se hace lo siguiente:
+
+```
+>sails generate controller NombreControlador
+
+```
+modificar el module.exports={
+hola:function(req,res){
+
+}
+}
+}
+}
