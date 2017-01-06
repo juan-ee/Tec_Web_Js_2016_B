@@ -274,18 +274,25 @@ Después de reiniciar el servidor podemos apreciar lo siguiente:
 
 - Si escribimos la ruta `http://localhost:1337/Saludo/hola`:
 
+![]()
 
 - Con la ruta `http://localhost:1337/Saludo/chao`:
 
+![]()
 
 Al utilizar postman y al acceder a la ruta `http://localhost:1337/Saludo/json` encontramos:
 
-- Con el método GET:
+- Con el método GET con parámetros:
+
+![]()
 
 - Con el método POST:
 
+![]()
+
 - Con cualquier otro:
 
+![]()
 
 
 ---
