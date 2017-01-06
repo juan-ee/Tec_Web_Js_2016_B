@@ -1,11 +1,11 @@
-# Sails.js, Assets, Views, Pipeline, Controllers
+# Sails.js
 
 <p align="center">
 <img src="https://camo.githubusercontent.com/6c76c5e3904170744bad0031ac667f8bc252147f/687474703a2f2f692e696d6775722e636f6d2f52497675392e706e67">
 </p>
 
 ### Materia : `Tecnologías Web con JavaScript`
-### Tema : `Sails.js, Assets, Views, Pipeline, Controllers` 
+### Tema : `Sails.js` 
 ### Fecha : `2016-12-21`
 ### Estudiante : `Juan Erazo`
 ### Profesor : `Tania Calle - Adrian Eguez`
@@ -23,19 +23,22 @@
   - <a href="#pipelines">Pipelines</a>
   - <a href="#controllers">Controllers</a>
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
-    * 
+  - <a href="#inst">Instalación</a>
+  - <a href="#psimp">Proyecto Simple</a>
+  - <a href="#assets2">Assets</a>
+  - <a href="#vistas">Vistas</a>
+  - <a href="#controladores">Controladores</a>
 - <a href="#conrec">Conclusiones y Recomendaciones</a>     
 
 <a name="tema"></a>
 ## Tema
-El tema de la práctica es: **`Sails.js, Assets, Views, Pipeline, Controllers`**
+El tema de la práctica es: **`Sails.js`**
 
 <a name="objetivos"></a>
 ## Objetivos
-- 
-- 
-- 
-- 
+- Aprender a utilizar y configurar el framework sails.js
+- Crear vistas personalizadas en sails
+- Generar un controlador simple
 
 ---
 <a name="marco-teorico"></a>
@@ -80,8 +83,9 @@ Los controladores están compuestos de un conjunto de métodos llamados acciones
 
 ---
 <a name="desarrollo"></a>
-## Desarrollo del informe
+## Desarrollo del informe  
 
+<a name="inst"></a>
 ### Instalación
 Primero es necesario haber instalado **Node.js**.
 
@@ -89,10 +93,11 @@ Para la instalación de **Sails.js** simplemente se ejecuta el siguiente comando
 
 > npm insall -g sails
 
-![]()
+![Instalacion](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/1.png)
 
 <a href="#cabecera">Volver a la cabecera</a>
 
+<a name="#psimp"></a>  
 ### Proyecto simple
 
 Para crear un proyecto, se ejecuta lo siguiente:
@@ -109,12 +114,13 @@ Y el servidor se lo puede iniciar con el comando:
 
 Aparecerá lo siguiente:
 
-![]()
+![Lift](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/2.png)
 
 Se puede ver que el servidor está escuchando en el **puerto 1337** y con un navegador podemos visualizarlo:
 
-![]()
+![Serv](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/3.png)
 
+<a name="#assets2"></a>
 ### Assets
 En assets se tendrán los archivos que serán públicos para que sean visualizados en la aplicación.
 Dentro de la carpeta **/assets** se creará otra carpeta llamada **App** que contenerá los siguientes archivos:
@@ -147,16 +153,17 @@ alert("No es bueno usar alertas");
 ```
 
 Ahora bien, para acceder a estos archivos simplemente se debe agregar en la URL el nombre de la carpeta que se creó (en este caso **App**):
-![]()
+![URL](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/4.png)
 
 Aparecerá la alerta que se escribió en el script **app.js**:
 
-![]()
+![Alerta](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/5.png)
 
 Y luego se visualizará el contenido del archivo **index.html** que ha utilizado estilos del archivo **estilos.css**:
 
-![]()
+![Index](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/6.png)
 
+<a name="#vistas"></a>    
 ### Vistas
 Las vistas se encuentran en la carpeta **/views** y son archivos de formato **.ejs**. La vista por defecto está escrita en el archivo **homepage.ejs** y corresponde a la página de inicio. En donde, se modificará el código de la siguiente manera:
 ```html
@@ -175,7 +182,7 @@ Las vistas se encuentran en la carpeta **/views** y son archivos de formato **.e
 ```
 Obteniendo el siguiente resultado:
 
-![]()
+![Result](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/7.png)
 
 Se puede establecer un formato en común para todas las vistas al modificar el archivo **layaout.ejs**. Para este caso, utilizaremos el archivo **estilos.css** que se había creado antes. Para ello, agregamos la siguiente línea:
 ```html
@@ -183,7 +190,7 @@ Se puede establecer un formato en común para todas las vistas al modificar el a
 ```
 
 Al actualizar la página de nuevo se puede ver que se ajustó al formato establecido:
-![]()
+![Actualz](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/8.png)
 
 
 A continuación se escribirán los siguientes archivos:
@@ -224,8 +231,9 @@ module.exports.routes = {
 ```
 Reiniciamos el servidor y al especificar la ruta en el URL aparecerá la vista que se creó:
 
-![]()
+![Vista](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/9.png)
 
+<a name="#controladores"></a>
 ### Controladores
 Primero se empezará generando un controlador llamado **Saludo** en la carpeta del proyecto con el siguiente comando:
 
@@ -274,35 +282,36 @@ Después de reiniciar el servidor podemos apreciar lo siguiente:
 
 - Si escribimos la ruta `http://localhost:1337/Saludo/hola`:
 
-![]()
+![Hola](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/10.png)
 
 - Con la ruta `http://localhost:1337/Saludo/chao`:
 
-![]()
+![Chao](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/11.png)
 
 Al utilizar postman y al acceder a la ruta `http://localhost:1337/Saludo/json` encontramos:
 
 - Con el método GET con parámetros:
 
-![]()
+![Get](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/12.png)
 
 - Con el método POST:
 
-![]()
+![Post](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/13.png)
 
 - Con cualquier otro:
 
-![]()
+![Otro](https://raw.githubusercontent.com/vengatus/Tec_Web_Js_2016_B/11-Sails01/Informe/Imagenes/14.png)
 
+
+<a href="#cabecera">Volver a la cabecera</a>
 
 ---
 
 <a name="conrec"></a>
 ## Conclusiones y Recomendaciones
 
-- 
-- 
-- 
-- 
+- Sails es de los frameworks más completos y sencillos de utilizar que ofrece Node.
+- La generación de controladores en sails se realiza con un simple comando.
+- Cuando se realiza un cambio dentro del servidor es necesario reiniciarlo para apreciar los cambios.
 
 <a href="#cabecera">Volver a la cabecera</a>
