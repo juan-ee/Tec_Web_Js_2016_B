@@ -224,6 +224,69 @@ module.exports.routes = {
 ```
 Reiniciamos el servidor y al especificar la ruta en el URL aparecerá la vista que se creó:
 
+![]()
+
+### Controladores
+Primero se empezará generando un controlador llamado **Saludo** en la carpeta del proyecto con el siguiente comando:
+
+> sails generate controller Saludo
+
+Se ha creado un archivo **SaludoController.js** dentro de la carpeta **/api/controllers**, el cual se lo modificará de la siguiente manera:
+```javascript
+module.exports = {
+	 json: function (req, res) {
+
+        var parametros = req.allParams()
+
+        if (req.method == 'GET') {
+
+            res.json({
+                    nombre: 'hola get',
+                    para:parametros
+                });
+
+
+        } else {
+
+            if (req.method == 'POST') {
+                res.json({
+                    nombre: 'hola post'
+                });
+            } else {
+                res.json({
+                    nombre: 'hola todos los demas'
+                });
+            }
+
+        }
+
+    },
+    chao: function (req, res) {
+        res.send('Chao!');
+    },
+    hola: function (req, res) {
+        res.send('Hola');
+    }
+};
+```
+
+Después de reiniciar el servidor podemos apreciar lo siguiente:
+
+- Si escribimos la ruta `http://localhost:1337/Saludo/hola`:
+
+
+- Con la ruta `http://localhost:1337/Saludo/chao`:
+
+
+Al utilizar postman y al acceder a la ruta `http://localhost:1337/Saludo/json` encontramos:
+
+- Con el método GET:
+
+- Con el método POST:
+
+- Con cualquier otro:
+
+
 
 ---
 
