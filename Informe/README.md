@@ -157,6 +157,74 @@ Y luego se visualizará el contenido del archivo **index.html** que ha utilizado
 
 ![]()
 
+### Vistas
+Las vistas se encuentran en la carpeta **/views** y son archivos de formato **.ejs**. La vista por defecto está escrita en el archivo **homepage.ejs** y corresponde a la página de inicio. En donde, se modificará el código de la siguiente manera:
+```html
+<style>
+    .fondo{
+        background-color:darkseagreen;
+    }
+</style>
+
+<div class="fondo">
+    <h3>Aqui empieza homepage</h3>
+    <p>Ya no somos tan noobs en jails</p>
+    <h3>Aqui termina de homepage</h3>
+</div>
+
+```
+Obteniendo el siguiente resultado:
+
+![]()
+
+Se puede establecer un formato en común para todas las vistas al modificar el archivo **layaout.ejs**. Para este caso, utilizaremos el archivo **estilos.css** que se había creado antes. Para ello, agregamos la siguiente línea:
+```html
+<link rel="stylesheet" href="/App/estilos.css">
+```
+
+Al actualizar la página de nuevo se puede ver que se ajustó al formato establecido:
+![]()
+
+
+A continuación se escribirán los siguientes archivos:
+
+- quito.ejs
+```
+<h1>QUITO</h1>
+```
+- guayaquil.ejs
+```
+<h1>GUAYAQUIL</h1>
+```
+- cuenca.ejs
+```
+<h1>CUENCA</h1>
+```
+
+Y se modificará el archivo **/config/routes.js** agregando las siguientes líneas para abrir las vistas creadas:
+```javascript
+module.exports.routes = {
+
+  '/': {
+    view: 'homepage'
+  },
+
+  '/Quito': {
+    view: 'quito'
+  },
+    
+  '/Guayaquil': {
+    view: 'guayaquil'
+  },
+    
+  '/Cuenca': {
+    view: 'cuenca'
+  }
+};
+```
+Reiniciamos el servidor y al especificar la ruta en el URL aparecerá la vista que se creó:
+
+
 ---
 
 <a name="conrec"></a>

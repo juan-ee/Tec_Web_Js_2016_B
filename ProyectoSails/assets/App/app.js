@@ -1,1 +1,1 @@
-//alert("No es bueno usar alertas");
+alert("No es bueno usar alertas");
