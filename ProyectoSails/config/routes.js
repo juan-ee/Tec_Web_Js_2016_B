@@ -15,6 +15,4 @@ module.exports.routes = {
   '/Cuenca': {
     view: 'cuenca'
   }
-
-
 };
