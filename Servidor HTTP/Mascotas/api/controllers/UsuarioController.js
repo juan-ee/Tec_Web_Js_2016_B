@@ -10,7 +10,19 @@ module.exports = {
         //se accede /Usuario/crearUsuario
         var parametros = req.allParams();
         sails.log(parametros);
-
+        
+        switch(req.method){
+            case 'POST':
+                console.log('Es POST');
+                break;
+            case 'DELETE':
+                console.log('Se va a borrar')
+                break;
+            default:
+                console.log('Es otro')
+        }
+        
+        
         if (parametros.nombres && parametros.apellidos) {
             Usuario.create({
                 nombres: parametros.nombres,
