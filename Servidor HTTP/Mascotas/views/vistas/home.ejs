@@ -1,7 +1,23 @@
 <div style='background-color:white;color:black;'>
     <h1>HOLAA HOME</h1>
-    <h2><%= titulo%></h2>
-    <h2><%= numero%></h2>
-    <h2><%= lucho.cedula%></h2>
-    <h2><%= lucho.nombre%></h2>
+    <!--Datos del json que me regresa el controlador-->
+    <h2>JSON</h2>
+    <h4><%= titulo%></h3>
+    <h4><%= numero%></h3>
+    <h4><%= lucho.nombre%> : <%= lucho.cedula%></h4>
+
+    <!--Variables propias-->
+    <h2>VARIABLES PROPIAS CON EJS</h2>
+    <%var num=234%>
+    <%var arreglo=['e1','e2',{elem:'e3',n:3}]%>
+        <h4><%= num%></h2>
+        <h3>Iteracion</h3>
+        <% for(var i=0; i<arreglo.length; i++) {%>
+            <h4>
+                <%= arreglo[i] %>
+            </h4>            
+        <%}%>
+
+
+
 </div>

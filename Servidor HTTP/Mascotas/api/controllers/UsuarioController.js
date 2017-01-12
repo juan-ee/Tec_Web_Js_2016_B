@@ -38,9 +38,24 @@ module.exports = {
         } else {
             return res.badRequest('No envias todos los parametros');
         }
-
-
-
+    },
+    crearUsuarioForm:function(req,res){
+        var parametros = req.allParams();
+        sails.log(parametros);
+        if (parametros.nombres && parametros.apellidos) {
+            Usuario.create({
+                nombres: parametros.nombres,
+                apellidos: parametros.apellidos,
+                correo: parametros.correo
+            }).exec(function (err, usuarioCreado) {
+                if (err) {
+                    return res.serverError(err);
+                }                
+                return res.view('vistas/home');
+            });
+        } else {
+            return res.badRequest('No envias todos los parametros');
+        }
     }
 
 };
