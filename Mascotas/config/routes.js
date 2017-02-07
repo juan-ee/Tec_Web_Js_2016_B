@@ -32,8 +32,8 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    '/': {
-        view: 'homepage'
+    '/':{
+        view:'home'
     },
     '/Quito':{
         view:'quito'
@@ -44,6 +44,7 @@ module.exports.routes = {
     '/Cuenca':{
         view:'cuenca'
     },
+    'get /':  'RutasController.home',
     'get /Inicio':  'RutasController.home',
     'get /CrearUsuario':  'RutasController.crearUsuario'
     
