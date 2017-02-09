@@ -128,9 +128,21 @@ module.exports = {
                 apellidos:param.apellidos,
                 correo:param.correo
             }
-            Usuario.destroy({
+            
+            if(usuarioEditar.nombres==""){
+                delete usuarioEditar.nombres
+            }
+            if(usuarioEditar.apellidos==""){
+                delete usuarioEditar.apellidos
+            }
+            if(usuarioEditar.correo==""){
+                delete usuarioEditar.correo
+            }
+            
+            
+            Usuario.update({
                 id: param.id
-            }).exec(function (errorInesperado, UsuarioRemovido) {
+            },usuarioEditar).exec(function (errorInesperado, UsuarioRemovido) {
                 if (errorInesperado) {
                     return res.view('vistas/Error', {
                         error: {
