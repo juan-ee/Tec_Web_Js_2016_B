@@ -121,7 +121,7 @@ module.exports = {
     },
     editarUsuario: function (req, res) {
         var param = req.allParams()
-        if (param.id && (parametros.nombres || parametros.apellidos || parametros.correo)) {
+        if (param.idUsuario && (param.nombres || param.apellidos || param.correo)) {
             
             var usuarioEditar={
                 nombres:param.nombres,
@@ -141,7 +141,7 @@ module.exports = {
             
             
             Usuario.update({
-                id: param.id
+                id: param.idUsuario
             },usuarioEditar).exec(function (errorInesperado, UsuarioRemovido) {
                 if (errorInesperado) {
                     return res.view('vistas/Error', {

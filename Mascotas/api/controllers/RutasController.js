@@ -36,11 +36,52 @@ module.exports = {
                         }
                     });
                 }
-            
+
                 res.view('vistas/Usuario/ListarUsuarios', {
-                    usuarios:usuariosEncontrados
+                    usuarios: usuariosEncontrados
                 });
             })
+    },
+    editarUsuario: function (req, res) {
+        //to do -> cargar usuario dependiendo del id        
+        var parametros = req.allParams();
+        if (parametros.id) {
+            Usuario.findOne({
+                id: parametros.id
+            }).exec(function (errorInesperado, UsuarioEncontrado) {
+                if (errorInesperado) {
+                    return res.view('vistas/Error', {
+                        error: {
+                            desripcion: "Error inesperado",
+                            rawError: errorInesperado,
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+                if (UsuarioEncontrado) {
+                    return res.view('vistas/Usuario/editarUsuario', {
+                        usuarioAEditar: UsuarioEncontrado
+                    })
+                } else {
+                    return res.view('vistas/Error', {
+                        error: {
+                            desripcion: "No existe el id",
+                            rawError: "Usuario inexistente",
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+            })
+
+        } else {
+            return res.view('vistas/Error', {
+                error: {
+                    desripcion: "No se ha enviado el id",
+                    rawError: "Faltan parametros",
+                    url: "/ListarUsuarios"
+                }
+            });
+        }
     }
 
 };

@@ -41,9 +41,13 @@ module.exports.routes = {
     '/Cuenca':{
         view:'cuenca'
     },
+    '/Login':{
+        view:'login'
+    },
     'get /':  'RutasController.home',
     'get /Inicio':  'RutasController.home',
     'get /CrearUsuario':  'RutasController.crearUsuario',
+    'get /EditarUsuario':'RutasController.editarUsuario',    
     'get /ListarUsuarios':'RutasController.listarUsuarios',    
     'get /Error':  'RutasController.error'
     
