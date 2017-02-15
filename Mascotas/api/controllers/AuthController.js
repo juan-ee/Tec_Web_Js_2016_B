@@ -47,7 +47,10 @@ module.exports = {
                             },
                             // OK.
                             success: function () {
-                                return res.ok("Credencial segura");
+                                //para guardar la sesion    
+                                req.session.credencialSegura=usuarioEncontrado;
+                                //le mandamos a la vista home
+                                return res.view("vistas/home");                                                            
                             },
                         });
                     } else {
@@ -73,5 +76,18 @@ module.exports = {
             });
         }
 
+    },
+    tieneSesion:function(req,res){
+        if(req.session.credencialSegura){
+            return res.ok("Si tiene la credencial segura");
+        }else{
+            return res.forbidden();
+        }
+    },
+    logout:function(req,res){
+        req.session.credencialSegura=undefined;
+        return res.view("login");
     }
+    
+    //en la carpeta del api hay un archivo que se llama policies
 };
