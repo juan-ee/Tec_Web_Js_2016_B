@@ -1,3 +1,17 @@
 <h1>
   {{title}}
+  {{apellido}}
+  {{nombre}}
 </h1>
+
+<div [innerHTML]="nombreCompleto2()"></div>
+<h3 (click)="hizoClick()">{{nombreCompleto2()}}</h3>
+<h6 [innerHTML]="apellido" [hidden]="true"></h6>
+<br/>
+<input type="text" [placeholder]="nombreCompleto2()">
+<h4 [style.backgroundColor]="colorbg"
+    (mouseenter)="mouseEncima()"
+    #mouse
+>
+  "Mouse aqui"</h4>
+
