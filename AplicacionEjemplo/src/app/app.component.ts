@@ -9,7 +9,7 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
   title: string = "Hola amigos";
   nombre: string;
   apellido: string;
-  colorbg:="red";
+  colorbg="red";
   tamanoh4="51px";
 
   //--nombre: string;
@@ -39,5 +39,8 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
   }
   mouseEncima(){
     alert("mouse encima!");
+  }
+  crearTienda(formulario){
+    console.log(formulario);
   }
 }
