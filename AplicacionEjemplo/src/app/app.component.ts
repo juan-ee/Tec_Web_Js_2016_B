@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import {MasterURLService} from "./services/master-url.service";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,9 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
   tamanoH4 = "52px";
   classes = "btn btn-block btn-success";
   nuevaTienda: any = {};
-
+  disabledButton={
+    NuevaTiendaFormSubmitButton:false
+  };
 
   //--nombre: string;
   //despues de los dos puntos escribimos el tipo de datp
@@ -50,7 +53,7 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
   mouseEncima(){
     alert("mouse encima!");
   }
-  crearTienda(formulario){
+  crearTienda(formulario:NgForm){
     console.log(formulario);
     this._http.post(this._masterURL.url+"/tienda",{
       nombre:formulario.value.nombre
@@ -59,8 +62,10 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
         console.log("No hubo errores");
         console.log(res);
         this.nuevaTienda={};
+        this.disabledButton.NuevaTiendaFormSubmitButton=false;
       },
       (err)=>{
+        this.disabledButton.NuevaTiendaFormSubmitButton=false;
         console.log("Ocurrio un error",err);
       },
       ()=>{
