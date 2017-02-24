@@ -54,6 +54,9 @@
         <div class="col-sm-5">
           <button class="btn btn-block btn-danger" (click)="borrarTienda(tienda.id)">Borrar</button>
         </div>
+        <div class="col-sm-12">
+          <a [routerLink]="['/tienda',tienda.id,'producto']">Ver productos de la tienda</a>
+        </div>
       </div>
       <div class="div" [hidden]="tienda.formularioCerrado">
         <form action="">

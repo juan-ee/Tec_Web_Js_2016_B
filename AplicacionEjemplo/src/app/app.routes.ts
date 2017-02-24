@@ -7,6 +7,6 @@ export const routes:Routes=[
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
   {path:'tienda',component:TiendaComponent},
-  {path:'producto/:idProducto',component:ProductoComponent}
+  {path:'tienda/:idTienda/producto',component:ProductoComponent}
 ];
 export const routing:ModuleWithProviders=RouterModule.forRoot(routes);
