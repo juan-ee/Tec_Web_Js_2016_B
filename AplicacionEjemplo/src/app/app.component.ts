@@ -11,10 +11,10 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
   title: string = "Hola Amigos";
   nombre: string = "";
   apellido: string = "";
+  error:string;
   colorH4 = "red";
   tamanoH4 = "52px";
   classes = "btn btn-block btn-success";
-
   nuevaTienda: any = {};
 
 
@@ -29,6 +29,7 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
               private _masterURL: MasterURLService) {
     this.apellido = "Erazo";
     this.nombre = "Juan";
+    this.error="No hay errores";
     console.log("Inicio el constructor")
   }
 
