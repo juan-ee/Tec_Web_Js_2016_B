@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Http} from "@angular/http";
+import {Http, Response} from "@angular/http";
 import {MasterURLService} from "./services/master-url.service";
 import {NgForm} from "@angular/forms";
 
@@ -9,14 +9,9 @@ import {NgForm} from "@angular/forms";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit { //OnInit es el evento que muestra cuando esta listo el componente
-  title: string = "Hola Amigos";
-  nombre: string = "";
-  apellido: string = "";
-  error:string;
-  colorH4 = "red";
-  tamanoH4 = "52px";
-  classes = "btn btn-block btn-success";
+  title: string = "Tiendas";
   nuevaTienda: any = {};
+  tiendas=[];
   disabledButton={
     NuevaTiendaFormSubmitButton:false
   };
@@ -30,37 +25,35 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
   //tambien se puede devolver valores
   constructor(private _http: Http,
               private _masterURL: MasterURLService) {
-    this.apellido = "Erazo";
-    this.nombre = "Juan";
-    this.error="No hay errores";
-    console.log("Inicio el constructor")
   }
 
 
   //PRIMERO SE EJECUTA EL CONSTRUCTOR Y LUEGO EL ONINIT()
   ngOnInit() {
-    console.log("en el init");
-    this.apellido = "Sanchez";
-    this.nombre = "Enrique";
+    this._http.get(this._masterURL.url+"tienda")
+      .subscribe(
+      (res:Response)=>{
+        this.tiendas=res.json().map((value)=>{
+          value.formularioCerrado= true;
+          return value;
+        });
+      },
+      (err)=>{
+        console.log("Ocurrio un error",err);
+      },
+    );
   }
 
-  nombreCompleto2(): string {
-    return this.apellido + " " + this.nombre;
-  }
-  hizoClick(){
-    alert("hizo click");
-  }
-  mouseEncima(){
-    alert("mouse encima!");
-  }
   crearTienda(formulario:NgForm){
+    this.disabledButton.NuevaTiendaFormSubmitButton=false;
     console.log(formulario);
-    this._http.post(this._masterURL.url+"/tienda",{
+    this._http.post(this._masterURL.url+"tienda",{
       nombre:formulario.value.nombre
     }).subscribe(
       (res)=>{
         console.log("No hubo errores");
         console.log(res);
+        this.tiendas.push(res.json());
         this.nuevaTienda={};
         this.disabledButton.NuevaTiendaFormSubmitButton=false;
       },
@@ -71,7 +64,34 @@ export class AppComponent implements OnInit { //OnInit es el evento que muestra 
       ()=>{
         console.log("Termino la funcion");
       }
-
     );
+  }
+
+  actualizarTienda(tienda:any){
+    let parametos = {
+      nombre:tienda.nombre
+    };
+    this._http.put(this._masterURL.url+"tienda/"+tienda.id,parametos).subscribe(
+      (res)=>{
+        tienda.formularioCerrado=!tienda.formularioCerrado;
+        console.log(res.json());
+      },
+      (err)=>{
+        console.log("Ocurrio un error",err);
+      },
+    );
+  }
+
+  borrarTienda(id:number){
+    this._http.delete(this._masterURL.url+"tienda/"+id)
+      .subscribe(
+        (res)=>{
+          let tiendaBorrada=res.json();
+          this.tiendas=this.tiendas.filter(value=>tiendaBorrada.id!=value.id);
+        },
+        (err)=>{
+          console.log(err);
+        }
+      );
   }
 }
