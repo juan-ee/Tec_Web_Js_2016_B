@@ -1,52 +1,53 @@
 <div style='background-color:white;color:black;'>
-
-  <h1>Editar Mascotas</h1>
-  <p>¡Edita a tu mascotas!</p>
-
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-4">
+      <h1>Editar Mascota</h1>
       <form action="mascota/editarMascota" method="post">
         <div class="form-group">
-          <label>Nombre</label>
-          <input required type="text" class="form-control" placeholder="Nombre" name="nombre">
+          <label>Nuevo Nombre</label>
+          <input required type="text" class="form-control" placeholder="Nombre" name="nombre" value="<%= mascota.nombre %>">
         </div>
 
         <div class="form-group">
-          <label>Fecha Nacimiento</label>
-          <input type="date" class="form-control" placeholder="Fecha Nacimiento" name="fechaNacimiento">
+          <label>Nueva Fecha Nacimiento</label>
+          <input type="date" class="form-control" placeholder="Fecha Nacimiento" name="fechaNacimiento" value="<%= (mascota.fechaNacimiento=='')? '': mascota.fechaNacimiento.getDate()+'/'+(mascota.fechaNacimiento.getMonth()+1)+'/'+mascota.fechaNacimiento.getFullYear()%>">
         </div>
 
-        <label for="">Raza</label>
+        <label for="">Nueva Raza</label>
 
         <select class="form-control" name="idRaza">
           <% for(var i=0; i<razas.length; i++){ %>
-            <option value='<%=razas[i].id%>'>
-              <%=razas[i].nombre%>
-            </option>
-            <%  } %>
+          <option value="<%=razas[i].id%>" <%if(razas[i].id == mascota.idRaza.id ){%> selected <%}%> >
+            <%=razas[i].nombre%>
+          </option>
+          <%  } %>
         </select>
 
         <br>
-        <label for="">Pais Nacimiento</label>
-        <select class="form-control" name="paisNacimiento">
-          <option value='Ecuador'>Ecuador</option>
-          <option value='Peru'>Peru</option>
-          <option value='Colombia'>Colombia</option>
+        <label for="">Nuevo País Nacimiento</label>
+        <select class="form-control" name="paisNacimiento" ng-switch-default="<%= mascota.paisNacimiento %>" >
+          <option value='Ecuador' <%if(mascota.paisNacimiento == 'Ecuador'){%> selected <%}%> >Ecuador</option>
+          <option value='Peru' <%if(mascota.paisNacimiento == 'Peru'){%> selected <%}%> >Peru</option>
+          <option value='Colombia' <%if(mascota.paisNacimiento == 'Colombia'){%> selected <%}%> >Colombia</option>
         </select>
         <br>
         <input type="hidden" name="id" value="<%=mascota.id%>">
-        <button type="submit" class="btn btn-success">Crear Mascota</button>
+        <button type="submit" class="btn btn-success">Modificar </button>
 
       </form>
     </div>
+    <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <h3 class="text-center"> ID: <%=mascota.id%> -  <%=mascota.nombre%></h3>
-      <h4 class="text-center"> Dia: <%=mascota.fechaNacimiento.getDay()%> Mes: <%=mascota.fechaNacimiento.getMonth()%> Año: <%=mascota.fechaNacimiento.getFullYear()%></h4>
-      <p class="text-center">
-        <%= mascota.paisNacimiento %>
-      </p>
+      <h1>Datos actuales</h1>
+      <label>Nombre:</label>
+      <p ><%=mascota.nombre%></p> <br>
+      <label>Fecha de nacimiento:</label>
+      <p> <%= (mascota.fechaNacimiento=='')? 'No tiene': mascota.fechaNacimiento.getDate()+'/'+(mascota.fechaNacimiento.getMonth()+1)+'/'+mascota.fechaNacimiento.getFullYear()%></p>
+      <br>
+      <label>Raza:</label>
+      <p><%= mascota.idRaza.nombre %></p> <br>
+      <label>País:</label>
+      <p><%= mascota.paisNacimiento %></p>
     </div>
   </div>
-
-
 </div>

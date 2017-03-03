@@ -101,19 +101,15 @@ module.exports = {
 
   },
   editarMascota: function (req, res) {
-    var parametros = req.allParams();
-    if (parametros.id) {
-      Mascota.findOne({
-        id: parametros.id
-      }).exec(function (error, mascotaEncontrado) {
+    if (req.param('id')) {
+      Mascota.findOne(req.allParams()).populate('idRaza').exec(function (error, mascotaEncontrado) {
         if (error) return res.view('error', {
           title: 'Error',
           error: {
-            descripcion: 'Fallo al buscar la mascota',
+            descripcion: err.message,
             url: '/crearMascotas'
           }
         });
-
 
         Raza.find().exec(function (error, razasEncontrados) {
           if (error) return res.view('error', {
@@ -143,8 +139,7 @@ module.exports = {
     }
   },
   listarMascotas: function (req, res) {
-
-    Mascota.find().exec(function (error, mascotasEncontrados) {
+    Mascota.find({duenio:req.session.credencialSegura.id}).populate('idRaza').exec(function (error, mascotasEncontrados) {
       if (error) return res.serverError()
       return res.view('mascota/listarMascotas', {
         title: 'Lista de Mascotas',
@@ -153,8 +148,6 @@ module.exports = {
     });
   },
   crearRaza: function (req, res) {
-
-
     return res.view('raza/crearRaza', {
       title: 'Crear Raza'
     })

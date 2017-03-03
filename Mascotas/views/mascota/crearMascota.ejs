@@ -23,7 +23,6 @@
         </option>
         <%  } %>
     </select>
-
     <br>
     <label for="">Pais Nacimiento</label>
     <select class="form-control" name="paisNacimiento">
@@ -32,6 +31,7 @@
       <option value='Colombia'>Colombia</option>
     </select>
     <br>
+    <input type="hidden" name="duenio" value="<%= session.credencialSegura.id %>">
     <button type="submit" class="btn btn-success">Crear Mascota</button>
 
   </form>
