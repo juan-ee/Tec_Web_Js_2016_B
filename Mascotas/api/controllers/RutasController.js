@@ -168,6 +168,11 @@ module.exports = {
         razas: razasEncontrados
       })
     });
+  },
+  editarRaza:function (req,res) {
+      Raza.findOne({id:req.param('id')}).exec(function (err,encontrada) {
+        return res.view('raza/editarRaza',{razaAEditar:encontrada});
+    });
   }
 
 };

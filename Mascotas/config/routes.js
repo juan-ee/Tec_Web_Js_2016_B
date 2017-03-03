@@ -40,7 +40,8 @@ module.exports.routes = {
   'get /login':  'RutasController.logear',
 
   'get /ListarRazas': 'RutasController.listarRazas',
-  'get /CrearRaza': 'RutasController.crearRaza',
+  'get /editarRaza': 'RutasController.editarRaza',
+  'get /crearRaza': 'RutasController.crearRaza',
 
   'get /ListarMascotas': 'RutasController.listarMascotas',
   'get /EditarMascota': 'RutasController.editarMascota',
