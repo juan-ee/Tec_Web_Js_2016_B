@@ -22,45 +22,43 @@
 
 module.exports.routes = {
 
-    /***************************************************************************
-     *                                                                          *
-     * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-     * etc. depending on your default view engine) your home page.              *
-     *                                                                          *
-     * (Alternatively, remove this and add an `index.html` file in your         *
-     * `assets` directory)                                                      *
-     *                                                                          *
-     ***************************************************************************/
+  /***************************************************************************
+   *                                                                          *
+   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+   * etc. depending on your default view engine) your home page.              *
+   *                                                                          *
+   * (Alternatively, remove this and add an `index.html` file in your         *
+   * `assets` directory)                                                      *
+   *                                                                          *
+   ***************************************************************************/
+  'get /':  'RutasController.home',
+  'get /Inicio':  'RutasController.home',
+  'get /CrearUsuario':  'RutasController.crearUsuario',
+  'get /EditarUsuario':'RutasController.editarUsuario',
+  'get /ListarUsuarios':'RutasController.listarUsuarios',
+  'get /Error':  'RutasController.error',
+  'get /login':  'RutasController.logear',
 
-    '/Quito':{
-        view:'quito'
-    },
-    '/Guayaquil':{
-        view:'guayaquil'
-    },
-    '/Cuenca':{
-        view:'cuenca'
-    },
-    '/Login':{
-        view:'login'
-    },
-    'get /':  'RutasController.home',
-    'get /Inicio':  'RutasController.home',
-    'get /CrearUsuario':  'RutasController.crearUsuario',
-    'get /EditarUsuario':'RutasController.editarUsuario',    
-    'get /ListarUsuarios':'RutasController.listarUsuarios',    
-    'get /Error':  'RutasController.error'
-    
-    
+  'get /ListarRazas': 'RutasController.listarRazas',
+  'get /CrearRaza': 'RutasController.crearRaza',
 
-    /***************************************************************************
-     *                                                                          *
-     * Custom routes here...                                                    *
-     *                                                                          *
-     * If a request to a URL doesn't match any of the custom routes above, it   *
-     * is matched against Sails route blueprints. See `config/blueprints.js`    *
-     * for configuration options and examples.                                  *
-     *                                                                          *
-     ***************************************************************************/
+  'get /ListarMascotas': 'RutasController.listarMascotas',
+  'get /EditarMascota': 'RutasController.editarMascota',
+  'get /CrearMascota': 'RutasController.crearMascota',
+
+
+
+
+
+  /***************************************************************************
+   *                                                                          *
+   * Custom routes here...                                                    *
+   *                                                                          *
+   * If a request to a URL doesn't match any of the custom routes above, it   *
+   * is matched against Sails route blueprints. See `config/blueprints.js`    *
+   * for configuration options and examples.                                  *
+   *                                                                          *
+   ***************************************************************************/
 
 };
+

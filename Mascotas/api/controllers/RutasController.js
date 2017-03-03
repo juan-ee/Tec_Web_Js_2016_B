@@ -32,18 +32,18 @@ module.exports = {
                         error: {
                             desripcion: "Hubo un problema cargando los Usuarios",
                             rawError: errorIndefinido,
-                            url: "/ListarUsuarios"
+                            url: "/listarUsuarios"
                         }
                     });
                 }
 
-                res.view('vistas/Usuario/ListarUsuarios', {
+                res.view('vistas/Usuario/listarUsuarios', {
                     usuarios: usuariosEncontrados
                 });
             })
     },
     editarUsuario: function (req, res) {
-        //to do -> cargar usuario dependiendo del id        
+        //to do -> cargar usuario dependiendo del id
         var parametros = req.allParams();
         if (parametros.id) {
             Usuario.findOne({
@@ -54,7 +54,7 @@ module.exports = {
                         error: {
                             desripcion: "Error inesperado",
                             rawError: errorInesperado,
-                            url: "/ListarUsuarios"
+                            url: "/listarUsuarios"
                         }
                     });
                 }
@@ -67,7 +67,7 @@ module.exports = {
                         error: {
                             desripcion: "No existe el id",
                             rawError: "Usuario inexistente",
-                            url: "/ListarUsuarios"
+                            url: "/listarUsuarios"
                         }
                     });
                 }
@@ -78,10 +78,96 @@ module.exports = {
                 error: {
                     desripcion: "No se ha enviado el id",
                     rawError: "Faltan parametros",
-                    url: "/ListarUsuarios"
+                    url: "/listarUsuarios"
                 }
             });
         }
+    },
+    logear:function(req,res){
+      if(req.param('correo')){
+        return res.view('login',req.allParams());
+      }
+      return res.view('login',{correo:undefined});
+    },
+//mascotas
+  crearMascota: function (req, res) {
+    Raza.find().exec(function (error, razasEncontrados) {
+      if (error) return res.serverError();
+      return res.view('mascota/crearMascota', {
+        title: 'Crear Mascota',
+        razas: razasEncontrados
+      });
+    });
+
+  },
+  editarMascota: function (req, res) {
+    var parametros = req.allParams();
+    if (parametros.id) {
+      Mascota.findOne({
+        id: parametros.id
+      }).exec(function (error, mascotaEncontrado) {
+        if (error) return res.view('error', {
+          title: 'Error',
+          error: {
+            descripcion: 'Fallo al buscar la mascota',
+            url: '/crearMascotas'
+          }
+        });
+
+
+        Raza.find().exec(function (error, razasEncontrados) {
+          if (error) return res.view('error', {
+            title: 'Error',
+            error: {
+              descripcion: 'Fallo al buscar la mascota',
+              url: '/crearMascotas'
+            }
+          });
+
+          return res.view('mascota/editarMascota', {
+            title: 'Editar Mascota - ' + mascotaEncontrado.nombre,
+            mascota: mascotaEncontrado,
+            razas: razasEncontrados
+          })
+        });
+
+      });
+
+    } else {
+      return res.view('error', {
+        title: 'Error',
+        error: {
+          descripcion: 'No existe el ID'
+        }
+      });
     }
+  },
+  listarMascotas: function (req, res) {
+
+    Mascota.find().exec(function (error, mascotasEncontrados) {
+      if (error) return res.serverError()
+      return res.view('mascota/listarMascotas', {
+        title: 'Lista de Mascotas',
+        mascotas: mascotasEncontrados
+      })
+    });
+  },
+  crearRaza: function (req, res) {
+
+
+    return res.view('raza/crearRaza', {
+      title: 'Crear Raza'
+    })
+  },
+  listarRazas: function (req, res) {
+
+    Raza.find().exec(function (error, razasEncontrados) {
+      if (error) return res.serverError()
+      return res.view('raza/listarRazas', {
+        title: 'Lista de Razas',
+        razas: razasEncontrados
+      })
+    });
+  }
 
 };
