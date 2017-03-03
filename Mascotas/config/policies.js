@@ -38,8 +38,7 @@ module.exports.policies = {
         home: true,//para todos
         error: true,//sin ninguna politica, todos pueden acceder
         listarUsuarios: ['autenticado'],
-        crearUsuario: ['autenticado'],
-        editarUsuario: ['autenticado','mismoUsuario']        
+        //crearUsuario: ['autenticado'],
+        editarUsuario: ['autenticado','mismoUsuario'],
     }
-    
 };

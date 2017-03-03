@@ -10,9 +10,7 @@
 module.exports = {
 
     crearUsuario: function (req, res) {
-
         if (req.method == "POST") {
-
             var parametros = req.allParams();
 
             if (parametros.nombres && parametros.apellidos) {
@@ -20,9 +18,6 @@ module.exports = {
                     nombres: parametros.nombres,
                     apellidos: parametros.apellidos,
                     correo: parametros.correo
-                }
-                if (usuarioCrear.correo == "") {
-                    delete usuarioCrear.correo
                 }
                 Usuario.create(usuarioCrear).exec(function (err, usuarioCreado) {
                     if (err) {
@@ -34,26 +29,9 @@ module.exports = {
                             }
                         });
                     }
-                    return res.view('vistas/Usuario/crearUsuario');
+                    return res.redirect('/login?correo='+usuarioCreado.correo);
+
                 })
-
-                Usuario.find()
-                    .exec(function (errorIndefinido, usuariosEncontrados) {
-
-                        if (errorIndefinido) {
-                            res.view('vistas/Error', {
-                                error: {
-                                    desripcion: "Hubo un problema cargando los Usuarios",
-                                    rawError: errorIndefinido,
-                                    url: "/ListarUsuarios"
-                                }
-                            });
-                        }
-
-                        res.view('vistas/Usuario/ListarUsuarios', {
-                            usuarios: usuariosEncontrados
-                        });
-                    })
 
             } else {
                 return res.view('vistas/Error', {
@@ -91,23 +69,11 @@ module.exports = {
                         }
                     });
                 }
-                Usuario.find()
-                    .exec(function (errorIndefinido, usuariosEncontrados) {
 
-                        if (errorIndefinido) {
-                            res.view('vistas/Error', {
-                                error: {
-                                    desripcion: "Hubo un problema cargando los Usuarios",
-                                    rawError: errorIndefinido,
-                                    url: "/ListarUsuarios"
-                                }
-                            });
-                        }
-
-                        res.view('vistas/Usuario/ListarUsuarios', {
-                            usuarios: usuariosEncontrados
-                        });
-                    })
+                if(UsuarioRemovido[0].id==req.session.credencialSegura.id){
+                  return res.redirect('/auth/logout');
+                }
+                return res.redirect('/ListarUsuarios');
             })
         } else {
             return res.view('vistas/Error', {
@@ -122,13 +88,13 @@ module.exports = {
     editarUsuario: function (req, res) {
         var param = req.allParams()
         if (param.idUsuario && (param.nombres || param.apellidos || param.correo)) {
-            
+
             var usuarioEditar={
                 nombres:param.nombres,
                 apellidos:param.apellidos,
                 correo:param.correo
             }
-            
+
             if(usuarioEditar.nombres==""){
                 delete usuarioEditar.nombres
             }
@@ -138,8 +104,8 @@ module.exports = {
             if(usuarioEditar.correo==""){
                 delete usuarioEditar.correo
             }
-            
-            
+
+
             Usuario.update({
                 id: param.idUsuario
             },usuarioEditar).exec(function (errorInesperado, UsuarioRemovido) {
@@ -160,12 +126,12 @@ module.exports = {
                                 error: {
                                     desripcion: "Hubo un problema cargando los Usuarios",
                                     rawError: errorIndefinido,
-                                    url: "/ListarUsuarios"
+                                    url: "/listarUsuarios"
                                 }
                             });
                         }
 
-                        res.view('vistas/Usuario/ListarUsuarios', {
+                        res.view('vistas/Usuario/listarUsuarios', {
                             usuarios: usuariosEncontrados
                         });
                     })

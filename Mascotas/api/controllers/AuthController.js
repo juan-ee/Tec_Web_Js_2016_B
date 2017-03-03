@@ -47,10 +47,10 @@ module.exports = {
                             },
                             // OK.
                             success: function () {
-                                //para guardar la sesion    
+                                //para guardar la sesion
                                 req.session.credencialSegura=usuarioEncontrado;
                                 //le mandamos a la vista home
-                                return res.view("vistas/home");                                                            
+                                return res.view("vistas/home");
                             },
                         });
                     } else {
@@ -86,8 +86,8 @@ module.exports = {
     },
     logout:function(req,res){
         req.session.credencialSegura=undefined;
-        return res.view("login");
+        return res.redirect("/");
     }
-    
+
     //en la carpeta del api hay un archivo que se llama policies
 };

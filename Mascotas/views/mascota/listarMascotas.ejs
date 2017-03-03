@@ -1,0 +1,32 @@
+<%if(mascotas.length==0){%>
+<h1>No tienes mascotas registradas</h1>
+<%}else{%>
+
+<table class="table table-striped ">
+  <thead>
+  <tr>
+    <th><h3>Nombre</h3></th>
+    <th><h3>Fecha de Nacimiento</h3></th>
+    <th><h3>Pais</h3></th>
+    <th><h3>Raza</h3></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% mascotas.forEach((mascota) => { %>
+  <tr>
+    <td><h4><%= mascota.nombre %></h4></td>
+    <td><h4><%= (mascota.fechaNacimiento=='')? 'No tiene' : mascota.fechaNacimiento.getDate()+'/'+(mascota.fechaNacimiento.getMonth()+1)+'/'+mascota.fechaNacimiento.getFullYear() %></h4></td>
+    <td><h4><%= mascota.paisNacimiento %></h4></td>
+    <td><h4><%= mascota.idRaza.nombre %></h4></td>
+    <td>
+      <a href="/editarMascota?id=<%= mascota.id%>"> <button class="btn btn-block btn-primary"> Editar</button></a>
+    </td>
+    <td>
+      <a href="mascota/borrarmascota?id=<%= mascota.id %>" class="btn btn-danger btn-block">Borrar</a>
+    </td>
+  </tr>
+  <% }) %>
+  </tbody>
+</table>
+<%}%>
